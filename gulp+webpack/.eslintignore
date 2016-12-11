@@ -1,0 +1,7 @@
+.eslintrc.js
+mock_server/lib/*
+config/*.js
+dist/*.js
+gulpfile.js
+node_modules/*.js
+rev/*.js

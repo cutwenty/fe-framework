@@ -1,0 +1,11 @@
+@mixin mediaFont ($smFont: 14px, $mdFont: 16px, $lgFont: 18px) {
+  @media (min-width: 320px) {
+    font-size: $smFont;
+  }
+  @media (min-width: 375px) {
+    font-size: $mdFont;
+  }
+  @media (min-width: 414px) {
+    font-size: $lgFont;
+  }
+}
