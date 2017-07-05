@@ -3,7 +3,7 @@ require('shelljs/global');
 const config = require('./config');
 
 const gulp = require('gulp');
-const notify = require('gulp-notify');
+// const notify = require('gulp-notify');
 
 // 打开devserver
 const webserver = require('gulp-webserver');
@@ -24,14 +24,14 @@ const uglify = require('gulp-uglify');
 
 gulp.task('copy_html', function () {
   gulp.src(config.entries.html)
-    .pipe(gulp.dest(config.output.html))
-    .pipe(notify({message: 'html移动完成'}));
+    .pipe(gulp.dest(config.output.html));
+    // .pipe(notify({message: 'html移动完成'}));
 });
 
 gulp.task('copy_font', function () {
   gulp.src(config.entries.font)
-    .pipe(gulp.dest(config.output.font))
-    .pipe(notify({message: 'font移动完成'}));
+    .pipe(gulp.dest(config.output.font));
+    // .pipe(notify({message: 'font移动完成'}));
 });
 
 // router 用来路由lib文件、image文件
@@ -75,8 +75,8 @@ gulp.task('scss', function() {
     .pipe(rev())
     .pipe(gulp.dest(config.output.css))
     .pipe(rev.manifest())
-    .pipe(gulp.dest(config.rev.css))
-    .pipe(notify({message: 'scss编译完成'}));
+    .pipe(gulp.dest(config.rev.css));
+    // .pipe(notify({message: 'scss编译完成'}));
 });
 
 gulp.task('rev', function () {
@@ -136,8 +136,8 @@ gulp.task('js', function() {
     .pipe(rev())
     .pipe(gulp.dest(config.output.js))
     .pipe(rev.manifest())
-    .pipe(gulp.dest(config.rev.js))
-    .pipe(notify({message: 'js编译完成'}));
+    .pipe(gulp.dest(config.rev.js));
+    // .pipe(notify({message: 'js编译完成'}));
 });
 
 gulp.task('watch',function () {
