@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
     'precss': {},
-    'autoprefixer': {},
+    'postcss-cssnext': {},
     // 'postcss-html': {} // vue里也能使用postcss？
   }
 };

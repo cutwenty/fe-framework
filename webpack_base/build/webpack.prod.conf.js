@@ -47,7 +47,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     // 定义编译时使用的全局常量
     // name: value
     new webpack.DefinePlugin({
-      'process.env': env
+      'process.env': utils.stringify(env)
     }),
     // 压缩js代码
     new webpack.optimize.UglifyJsPlugin({

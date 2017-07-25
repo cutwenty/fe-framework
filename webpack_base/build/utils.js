@@ -79,3 +79,12 @@ function getAllParams (str) {
   return params;
 }
 
+/**
+ * 将对象字符串化
+ */
+exports.stringify = function (obj) {
+  return Object.keys(obj).reduce((prev, next) => {
+    prev[next] = JSON.stringify(obj[next]);
+    return prev;
+  }, {});
+}
